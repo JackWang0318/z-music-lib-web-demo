@@ -44,7 +44,7 @@ export function MainPage() {
             className="text-sm font-medium hover:underline underline-offset-4"
             href="#"
           >
-            Testimonials
+            MusicHub
           </Link>
           <Link
             className="text-sm font-medium hover:underline underline-offset-4"
@@ -55,13 +55,13 @@ export function MainPage() {
           <div className="flex items-center gap-4">
             <Link
               className="px-2 py-1 text-sm font-medium rounded bg-blue-500 text-white hover:bg-blue-600"
-              href="/loginPage"
+              href="/login"
             >
               Log In
             </Link>
             <Link
               className="px-2 py-1 text-sm font-medium rounded border border-blue-500 text-blue-500 hover:border-blue-600 hover:text-blue-600"
-              href="#"
+              href="/signup"
             >
               Sign Up
             </Link>
