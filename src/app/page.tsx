@@ -1,20 +1,9 @@
 import { LoginBar } from "@/components/component/login-bar";
-// import { MainPage } from "@/components/component/main-page";
-
-// const Home = () => {
-//   return (
-//     <div>
-//       <MainPage />
-//       <LoginBar />
-//     </div>
-//   );
-// };
-
-// export default Home;
-
 import Link from "next/link";
 import { Avatar } from "@/components/ui/avatar";
 import { CardHeader, CardContent, Card } from "@/components/ui/card";
+import Header from "@/components/component/header";
+import Footer from "@/components/component/footer";
 
 export function MainPage() {
   return (
@@ -22,52 +11,8 @@ export function MainPage() {
       key="1"
       className="flex flex-col min-h-screen bg-white dark:bg-gray-800"
     >
-      <header className="px-4 lg:px-6 h-14 flex items-center">
-        <Link className="flex items-center justify-center" href="#">
-          <MusicIcon className="h-6 w-6 mr-2" />
-          <span className="text-xl font-bold">Z Music Lib</span>
-        </Link>
-        <nav className="ml-auto flex gap-4 sm:gap-6">
-          <Link
-            className="text-sm font-medium hover:underline underline-offset-4"
-            href="#"
-          >
-            About
-          </Link>
-          <Link
-            className="text-sm font-medium hover:underline underline-offset-4"
-            href="#"
-          >
-            Features
-          </Link>
-          <Link
-            className="text-sm font-medium hover:underline underline-offset-4"
-            href="#"
-          >
-            MusicHub
-          </Link>
-          <Link
-            className="text-sm font-medium hover:underline underline-offset-4"
-            href="#"
-          >
-            Contact
-          </Link>
-          <div className="flex items-center gap-4">
-            <Link
-              className="px-2 py-1 text-sm font-medium rounded bg-blue-500 text-white hover:bg-blue-600"
-              href="/login"
-            >
-              Log In
-            </Link>
-            <Link
-              className="px-2 py-1 text-sm font-medium rounded border border-blue-500 text-blue-500 hover:border-blue-600 hover:text-blue-600"
-              href="/signup"
-            >
-              Sign Up
-            </Link>
-          </div>
-        </nav>
-      </header>
+      <Header />
+
       <main className="flex-1">
         <section className="w-full pt-12 md:pt-24 lg:pt-32 border-y">
           <div className="px-4 md:px-6 space-y-10 xl:space-y-16">
@@ -163,41 +108,8 @@ export function MainPage() {
           </div>
         </section>
       </main>
-      <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t">
-        <p className="text-xs text-gray-500 dark:text-gray-400">
-          © Z Music Lib. All rights reserved.
-        </p>
-        <nav className="sm:ml-auto flex gap-4 sm:gap-6">
-          <Link className="text-xs hover:underline underline-offset-4" href="#">
-            Terms of Service
-          </Link>
-          <Link className="text-xs hover:underline underline-offset-4" href="#">
-            Privacy
-          </Link>
-        </nav>
-      </footer>
+      <Footer />
     </div>
-  );
-}
-
-function MusicIcon(props) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="M9 18V5l12-2v13" />
-      <circle cx="6" cy="18" r="3" />
-      <circle cx="18" cy="16" r="3" />
-    </svg>
   );
 }
 
